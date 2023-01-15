@@ -1,9 +1,11 @@
 import './Pea.scss'
 
+import{createClassNm} from '../functions/createClassNm'
+
 export default function Pea({id}){
+
     return(
-        <div className="pea" id={id}>
-            <h1>Pea</h1>
+        <div className={createClassNm("GGSS")}  id={id}>
         </div>
     )
 }

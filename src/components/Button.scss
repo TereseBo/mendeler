@@ -2,4 +2,7 @@
 
 button{
     @include m.link-button;
+    padding: 0;
+    height: 5rem;
+    width: 5rem;
 }

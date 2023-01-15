@@ -1,37 +1,42 @@
 @use 'variables' as v;
-@mixin base-text{
+
+@mixin base-text {
     font-size: 1rem;
     color: v.$primary-color;
 }
-@mixin header-text{
+
+@mixin header-text {
     font-size: 2rem;
 }
-@mixin sub-header-text{
+
+@mixin sub-header-text {
     font-size: 1.2rem;
     font-weight: 600;
     font-style: italic;
 }
-@mixin dark-text-box{
+
+@mixin dark-text-box {
     background-color: v.$accent-color2;
     color: v.$primary-color;
-    
+
 }
-@mixin light-text-box{
+
+@mixin light-text-box {
     background-color: v.$primary-color;
     color: v.$accent-color2;
 }
 
-@mixin link-button{
+@mixin link-button {
     border: none;
     border-radius: 5px;
     padding: 1rem;
     margin: 1rem;
-
+    text-align: center;
     text-decoration: none;
     @include dark-text-box;
     @include sub-header-text;
-    &:hover{
+
+    &:hover {
         color: v.$accent-color3;
     }
 }
-

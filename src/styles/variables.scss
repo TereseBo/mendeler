@@ -1,8 +1,10 @@
-$base-color: rgb(160, 27, 231);
+$base-color: rgb(62, 1, 94);
 $primary-color:rgb(162, 155, 243);
 $accent-color2: rgb(25, 1, 35);
 $accent-color3: rgb(239, 13, 202);
 $dirt-color: rgb(129, 73, 27);
 
-$child-border: 2px solid $accent-color3;
-$parent-border: 2px dotted $accent-color3;
+$child-border: 1px solid $accent-color2;
+$parent-border: 3px dotted $accent-color2;
+
+$thin-border: 1px solid $accent-color2;
