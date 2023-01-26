@@ -8,7 +8,6 @@ function createClassNm (genes) {
     });
 
 
-console.log(classNm);
 return classNm;
   
 }

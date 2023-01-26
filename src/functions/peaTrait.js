@@ -10,6 +10,7 @@ function peaTrait(gene) {
             break;
         case 'yy':
             trait = 'yellow';
+            break;
         //Texture genes
         case 'SS':
         case 'Sw':
@@ -18,6 +19,7 @@ function peaTrait(gene) {
             break;
         case 'ww':
             trait = 'wrinkled';
+            break;
     }
     return trait;
 }
