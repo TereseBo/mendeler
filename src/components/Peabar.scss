@@ -1,13 +1,27 @@
+@use "../styles/variables.scss" as v;
+@use '../styles/mixins.scss' as m;
+
 .peabar{
     box-sizing: border-box;
-    padding: 2rem;
+    padding: 1rem;
     margin: 0;
     //width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
   //  gap: 4rem;
+
+  p{
+    margin:0.2rem;
+    padding: 0.2rem;
+    text-align: center;
+    color: v.$accent-color2;
+    font-weight: 500;
+    
+    
+    
+  }
 }
 
 

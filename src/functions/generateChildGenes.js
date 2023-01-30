@@ -1,32 +1,44 @@
 import splitGenes from "./splitGenes";
+import getAlleles from "./getAlleles";
+import alleleSorter from "./alleleSorter";
 
-export default function generateChildGenes(genes1, genes2){
-console.log(genes1)
-console.log(genes2)
+export default function generateChildGenes(genes1, genes2) {
+    console.log(genes1)
+    console.log(genes2)
 
-let alleles1 = [];
-let alleles2= [];
-alleles1=splitGenes(genes1)
-alleles2=splitGenes(genes2)
-let child1, child2, child3, child4 ='';
 
-/*
-for (let i = 0; i < genes1.length; i += 2) {
-    alleles.push(genes1.substring(i, i + 2));
-}
-*/
-console.log(alleles1)
-alleles1.forEach((gene, index)=>{
-    child1=gene.substring(0,1)+alleles2[index].substring(0,1)
+   let alleles1 = getAlleles(genes1)
+   let alleles2 = getAlleles(genes2)
+   console.log(alleles1)
+   console.log(alleles2)
+    alleles2 = getAlleles(genes2)
+    let nrOfChildren=alleles1.length*alleles2.length;
 
+    let childArr= [];
+    for(let i=0; i<nrOfChildren; i++){
+        childArr[i]='';
+    }
+    let k=0;
+    for(let i=0; i<alleles1.length; i++){
+        for(let j=0; j<alleles2.length; j++){
+            childArr[k]=alleles1[i]+alleles2[j]
+            k++;
+        }
+    }
+console.log(childArr)
+childArr=childArr.map((gene) => {
+    console.log(gene)
+    let stringArr=gene.split('')
+    stringArr.sort((a,b)=>alleleSorter(a,b))
+    //console.log(temp)
+    console.log(stringArr)
+    gene=stringArr.join('')
+    console.log(gene)
+return gene
+    
+    
 })
+console.log(childArr)
 
-
-child1=genes1.substring(0,1)+genes2.substring(0,1)
-child2=genes1.substring(1,2)+genes2.substring(0,1)
-
-child3=genes1.substring(0,1)+genes2.substring(1,2)
-child4=genes1.substring(1,2)+genes2.substring(1,2)
-
-console.log(child1, child2, child3, child4)
+    return childArr;
 }
