@@ -32,27 +32,20 @@ export default function Game() {
             console.log("only parent 1 is set")}
     }
 
+
+
     return (
-        <div className="game">
+        <div className="game" >
             <Button callback={crossPeas } pea1={parentGene1} pea2={parentGene2} text="Cross" id="cross-btn" />
-            <Peabar className="parent" id="parent1" gene={parentGene1} />
-            <Peabar className="parent" id="parent2" gene={parentGene2} />
-            <Peabar className="child" id="0" gene={childgenes[0]} callback={peaClick}/>
-            <Peabar className="child" id="1" gene={childgenes[1]} callback={peaClick}/>
-            <Peabar className="child" id="2" gene={childgenes[2]} callback={peaClick}/>
-            <Peabar className="child" id="3" gene={childgenes[3]} callback={peaClick}/>
-            <Peabar className="child" id="4" gene={childgenes[4]} callback={peaClick}/>
-            <Peabar className="child" id="5" gene={childgenes[5]} callback={peaClick}/>
-            <Peabar className="child" id="6" gene={childgenes[6]} callback={peaClick}/>
-            <Peabar className="child" id="7" gene={childgenes[7]} callback={peaClick}/>
-            <Peabar className="child" id="8" gene={childgenes[8]} callback={peaClick}/>
-            <Peabar className="child" id="9" gene={childgenes[9]} callback={peaClick}/>
-            <Peabar className="child" id="10" gene={childgenes[10]} callback={peaClick}/>
-            <Peabar className="child" id="11" gene={childgenes[11]} callback={peaClick}/>
-            <Peabar className="child" id="12" gene={childgenes[12]} callback={peaClick}/>
-            <Peabar className="child" id="13" gene={childgenes[13]} callback={peaClick}/>
-            <Peabar className="child" id="14" gene={childgenes[14]} callback={peaClick}/>
-            <Peabar className="child" id="15" gene={childgenes[15]} callback={peaClick}/>
+            <Peabar className="parent peabar" id="parent1" gene={parentGene1} />
+            <Peabar className="parent peabar" id="parent2" gene={parentGene2} />
+            <div id="child-container">
+            {childgenes.map((item, index)=>(
+                            <Peabar className="child peabar" id={index} gene={item} callback={peaClick}/>
+            )
+            )}
+            </div>
+
 
         </div>
 

@@ -10,7 +10,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: aqua;
   //  gap: 4rem;
+  &.child{
+width: 25%;
+  }
+  &.parent{
+
+  }
 
   p{
     margin:0.2rem;
