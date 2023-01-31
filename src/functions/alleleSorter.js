@@ -1,5 +1,5 @@
 import geneType from "./genetype";
-
+//Sorts the letters in order according to gene type, color/texture
 export default function alleleSorter(a, b) {
     let allelePosA = geneType(a);
     let allelePosB = geneType(b);

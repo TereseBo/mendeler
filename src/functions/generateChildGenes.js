@@ -1,7 +1,6 @@
 import getAlleles from "./getAlleles";
 import mixGenes from "./mixGenes";
-import alleleSorter from "./alleleSorter";
-
+//Returns array containing generated childgenes from parentgenes
 export default function generateChildGenes(genes1, genes2) {
 
 

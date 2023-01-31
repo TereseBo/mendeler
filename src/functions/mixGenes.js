@@ -1,5 +1,5 @@
 import alleleSorter from "./alleleSorter";
-
+//Mixes alleles and reurns arr of recombined children
 export default function mixGenes(alleles1, alleles2){
     let nrOfChildren=alleles1.length*alleles2.length
     let childArr=[]

@@ -3,14 +3,14 @@
 .game{
     background-color: aliceblue;
     display: grid;
-    max-width: fit-content;
+    max-width: 1000px;
     margin: auto;
     padding:2rem 2rem 2rem 0;
     border-radius: 5px;
     
 
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns:0.5fr, repeat(3, 1fr);
+    grid-template-rows: 0.5fr, repeat(3, 1fr);
     gap: 0;
     button{
         margin: 2rem;
@@ -29,6 +29,8 @@
         justify-self: stretch;
         border-right: v.$parent-border;
         margin-right: 1rem;
+        padding-left: 2.7rem;
+        padding-right: 2.7rem;
     }
     #child-container{
         grid-row: 2 / 5;
@@ -41,32 +43,5 @@
 
     }
 
-    #child1-container{
-        grid-row: 2 / 3;
-        grid-column: 2 / 3;
-        justify-self: stretch;
-        border-right: v.$child-border;
-        border-bottom: v.$child-border;
-    }
-    #child2-container{
-        grid-row: 2 / 3;
-        grid-column: 3 / 4;
-        justify-self: stretch;
-        border-left:  v.$child-border;;
-        border-bottom: v.$child-border;
-    }
-    #child3-container{
-        grid-row: 3 / 4;
-        grid-column: 2 / 3;
-        justify-self: stretch;
-        border-top: v.$child-border;
-        border-right: v.$child-border;
-    }
-    #child4-container{
-        grid-row: 3 / 4;
-        grid-column: 3 / 4;
-        justify-self: stretch;
-        border-top: v.$child-border;
-        border-left: v.$child-border;
-    }
+
 }

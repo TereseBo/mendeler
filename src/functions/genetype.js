@@ -1,3 +1,4 @@
+//Returns a numeric value representing position in genestring
 export default function geneType(gene) {
     let alleleType=0;
     switch (gene) {

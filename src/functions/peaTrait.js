@@ -1,3 +1,4 @@
+//Translates geneletters to text to be used for css
 function peaTrait(gene) {
     let trait = "pea";
 

@@ -1,5 +1,6 @@
 import splitGenes from "./splitGenes";
 import {peaTrait} from "./peaTrait";
+//Creates classes for display of traits
 function createClassNm (genes) {
     let classNm="pea ";
     let geneArr=splitGenes(genes);
