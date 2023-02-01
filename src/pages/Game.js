@@ -13,7 +13,7 @@ import generateChildGenes from "../functions/generateChildGenes"
 
 
 export default function Game() {
-    const [parentGene1, setParentGene2] = useState("GGSS")
+    const [parentGene1, setParentGene2] = useState("GGcc")
     const [parentGene2, setParentGene1] = useState("yyww")
     const [childgenes, setChildGenes] = useState(["","","","","","","","","","","","","","","",""])//TODO: Remove preset length of childarr
 

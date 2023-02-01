@@ -8,6 +8,7 @@ export default function geneType(gene) {
             alleleType = 1;
             break;
         //Texture genes
+        case 'c':
         case 'S':
         case 'w':
             alleleType = 2;

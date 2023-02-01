@@ -1,21 +1,51 @@
 @use "../styles/variables.scss" as v;
+//Basic pea appearance
 .pea{
     border-radius: 50%;
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
 
 }
+//colors
 .green{
     background-color: rgb(5, 86, 4);
-    border: v.$thin-border;
-
 }
 .yellow{
-    background-color: rgb(255, 255, 0);
-    border: v.$thin-border;
+    background-color: rgb(223, 223, 78);
 }
+//shapes
 .smooth{
     
 }
 .wrinkled{
+      width: 3.5rem;
+      height: 3.5rem;
+      position: relative;
+      border-radius: 50% 25% 35% 50%;
+     // text-align: center;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: inherit;
+      }
+      &:before {
+        border-radius: 25% 25% 30% 25%;
+        transform: rotate(25deg);
+      }
+      &:after {
+        transform: rotate(60deg);
+        //background-color: blueviolet;
+        border-radius: 25% 50% 30% 30%;
+      }
+
+}
+.cuboid{
+  border-radius: 45% 25% 45% 30%;
+  transform: skew(0.01turn, 15deg);
+
 }
