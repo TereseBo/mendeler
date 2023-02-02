@@ -40,3 +40,7 @@
         color: v.$accent-color3;
     }
 }
+@mixin game-component{
+    background-color: aliceblue;
+    border-radius: 5px;
+}

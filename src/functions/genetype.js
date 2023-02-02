@@ -1,9 +1,13 @@
 //Returns a numeric value representing position in genestring
 export default function geneType(gene) {
-    let alleleType=0;
+    let alleleType = 0;
     switch (gene) {
         //Color genes
+        case 'b':
         case 'G':
+        case 'K':
+        case 'o':
+        case 'p':
         case 'y':
             alleleType = 1;
             break;

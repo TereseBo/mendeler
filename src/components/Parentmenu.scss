@@ -1,0 +1,6 @@
+@use '../styles/mixins.scss' as m;
+
+.parentmenu{
+    @include m.game-component;
+
+}

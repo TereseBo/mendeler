@@ -3,6 +3,8 @@ import { useState } from "react"
 //Components
 import Peabar from "../components/Peabar"
 import Button from "../components/Button"
+import Gamearea from "../components/Gamearea"
+import Parentmenu from "../components/Parentmenu"
 //Functions
 //import crossPeas from "../functions/crossPeas"
 //TODO: Add sidebar with possible parents to pick from, update css and related functions accordingly
@@ -16,7 +18,7 @@ export default function Game() {
     const [parentGene1, setParentGene2] = useState("GGcc")
     const [parentGene2, setParentGene1] = useState("yyww")
     const [childgenes, setChildGenes] = useState(["","","","","","","","","","","","","","","",""])//TODO: Remove preset length of childarr
-
+    const posParents=['oocc', 'bbww', 'KKSS', 'ppcc']
     function crossPeas(){
         setChildGenes(generateChildGenes(parentGene1, parentGene2))
     }
@@ -39,11 +41,16 @@ export default function Game() {
 
 //Returns the game-area with child and parentpeas. Nr of children are determined by the number of alleles present
     return (
+        <div className="gamebox">
+            <Parentmenu callback={peaClick} pospArr={posParents}/>
+        <Gamearea parentGene1={parentGene1} parentGene2={parentGene2} childgenes={childgenes} childfunk={peaClick} buttonfunk={crossPeas}/>
+        </div>
+        /*
         <div className="game" >
             <Button callback={crossPeas } pea1={parentGene1} pea2={parentGene2} text="Cross" id="cross-btn" />
             <Peabar className="parent peabar" id="parent1" gene={parentGene1} />
             <Peabar className="parent peabar" id="parent2" gene={parentGene2} />
-            <div id="child-container">
+            <div id="1">
             {childgenes.map((item, index)=>(
                             <Peabar className="child peabar" key={index}id={index} gene={item} callback={peaClick}/>
             )
@@ -51,7 +58,7 @@ export default function Game() {
             </div>
 
 
-        </div>
+        </div>*/
 
     )
 }
