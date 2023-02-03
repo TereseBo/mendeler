@@ -11,7 +11,7 @@ export default function Gamearea({parentGene1, parentGene2, childgenes, childfun
         <Peabar className="parent peabar" id="parent2" gene={parentGene2} />
         <div id="child-container">
         {childgenes.map((item, index)=>(
-                        <Peabar className="child peabar" key={index}id={index} gene={item} callback={childfunk}/>
+                        <Peabar className="child peabar" key={index}id={item} gene={item} callback={childfunk}/>
         )
         )}
         </div>

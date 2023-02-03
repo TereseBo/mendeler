@@ -5,6 +5,7 @@ import Peabar from "../components/Peabar"
 import Button from "../components/Button"
 import Gamearea from "../components/Gamearea"
 import Parentmenu from "../components/Parentmenu"
+import Genebar from "../components/Genebar"
 //Functions
 //import crossPeas from "../functions/crossPeas"
 //TODO: Add sidebar with possible parents to pick from, update css and related functions accordingly
@@ -18,7 +19,7 @@ export default function Game() {
     const [parentGene1, setParentGene2] = useState("GGcc")
     const [parentGene2, setParentGene1] = useState("yyww")
     const [childgenes, setChildGenes] = useState(["","","","","","","","","","","","","","","",""])//TODO: Remove preset length of childarr
-    const posParents=['oocc', 'bbww', 'KKSS', 'ppcc']
+    const posParents=['GGSS', 'yyww', 'ooSS','KKee', 'bbcc', 'ppSS']
     function crossPeas(){
         setChildGenes(generateChildGenes(parentGene1, parentGene2))
     }
@@ -26,24 +27,28 @@ export default function Game() {
     function peaClick(e){
         console.log("pea clicked")
         console.log(e.target.id)
+        console.log(this)
         console.log(parentGene1)
         console.log(parentGene2)
         if(parentGene1 && parentGene2){
-            setParentGene1(childgenes[e.target.id])
+            setParentGene1(e.target.id)
             setParentGene2('')
            console.log("both parents are set")
         }else {
 
-            setParentGene2(childgenes[e.target.id])
+            setParentGene2(e.target.id)
             console.log("only parent 1 is set")}
     }
 
 
 //Returns the game-area with child and parentpeas. Nr of children are determined by the number of alleles present
     return (
+        <div>
+        <Genebar className="gameheader" genes={posParents}/>
         <div className="gamebox">
             <Parentmenu callback={peaClick} pospArr={posParents}/>
         <Gamearea parentGene1={parentGene1} parentGene2={parentGene2} childgenes={childgenes} childfunk={peaClick} buttonfunk={crossPeas}/>
+        </div>
         </div>
         /*
         <div className="game" >

@@ -44,8 +44,18 @@
         flex-wrap: wrap;
 
         & .peabar:nth-child(odd) {
-            .pea {
+            .cuboidelliptic {
+                rotate: (180deg);
+            }
+        }
+        & .peabar:nth-child(odd) {
+            .cuboidwrinkled {
                 rotate: (90deg);
+            }
+        }
+        & .peabar:nth-child(odd) {
+            .ellipticwrinkled {
+                rotate: (160deg);
             }
         }
     }

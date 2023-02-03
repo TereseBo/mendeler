@@ -7,9 +7,23 @@ function peaTrait(gene) {
         case 'bb':
             trait = 'brown'
             break;
+        case 'bo':
+        case 'ob':
+            trait = 'brownorange';
+            break;
+        case 'bp':
+        case 'pb':
+            trait = 'brownpurple';
+            break;
+        case 'by':
+        case 'yb':
+            trait = 'brownyellow';
+            break;
         case 'GG':
         case 'Gb':
         case 'bG':
+        case 'Go':
+        case 'oG':
         case 'Gp':
         case 'pG':
         case 'Gy':
@@ -32,8 +46,21 @@ function peaTrait(gene) {
         case 'oo':
             trait = 'orange'
             break;
+        case 'op':
+        case 'po':
+            trait = 'orangepurple';
+            break;
+        case 'oy':
+        case 'yo':
+            trait = 'orangeyellow';
+            break;
+
         case 'pp':
             trait = 'purple'
+            break;
+        case 'py':
+        case 'yp':
+            trait = 'purpleyellow';
             break;
         case 'yy':
             trait = 'yellow';
@@ -42,8 +69,25 @@ function peaTrait(gene) {
         case 'cc':
             trait = 'cuboid';
             break;
+        case 'ce':
+        case 'ec':
+            trait = 'cuboidelliptic'
+            break;
+        case 'cw':
+        case 'wc':
+            trait = 'cuboidwrinkled';
+            break;
+        case 'ee':
+            trait = 'elliptic';
+            break;
+            case 'ew':
+                case 'we':
+                    trait='ellipticwrinkled';
+                    break;
         case 'SS':
         case 'Sc':
+        case 'Se':
+        case 'eS':
         case 'cS':
         case 'Sw':
         case 'wS':
