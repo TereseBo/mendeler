@@ -1,4 +1,5 @@
 @use "../styles/variables.scss" as v;
+
 //Basic pea appearance
 .pea{
     border-radius: 50%;
@@ -8,47 +9,47 @@
 }
 //colors
 .brown{
-  background-color: rgb(93, 46, 2);
+  background-color:  v.$bb;
 }
 .brownorange{
-  background-color: rgb(172, 61, 5);
+  background-color:  v.$bo;
 }
 .brownpurple{
-background-color: rgb(62, 4, 13);
+background-color:  v.$bp;
 }
 .brownyellow{
-  background-color: rgb(228, 191, 3);
+  background-color:  v.$by;
 
 }
-.green{
-    background-color: rgb(5, 86, 4);
+.Green{
+    background-color: v.$GX;
 }
 .greenkhaki{
-  background-color: rgb(55, 67, 11);
+  background-color:  v.$GK;
 }
-.khaki{
-  background-color: rgb(100, 84, 2); ;
+.Khaki{
+  background-color:  v.$KX;
 }
 .orange{
-  background-color: rgb(253, 92, 5);
+  background-color:  v.$oo;
 }
 .orangeyellow{
-  background-color: rgb(249, 127, 4);
+  background-color:  v.$oy;
 }
 .orangepurple{
-  background-color: rgb(98, 0, 0);
+  background-color:  v.$op;
 }
 .purple{
-  background-color: rgb(50, 3, 58);
+  background-color:  v.$pp;
 }
 .purpleyellow{
-  background-color: rgb(107, 3, 112);
+  background-color: v.$py;
 }
 .yellow{
-    background-color: rgb(246, 255, 0);
+    background-color:  v.$yy;
 }
 //shapes
-.smooth{
+.Round{
     
 }
 

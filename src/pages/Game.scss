@@ -1,22 +1,28 @@
 @use "../styles/mixins.scss" as m;
 
-.gamebox {
+.gamecontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .gamebox {
     text-align: center;
     display: flex;
     flex-direction: row;
-  gap:2rem;
-  
-   
-    header{
+    align-items: stretch;
+    gap: 2rem;
+
+
+    header {
       padding-bottom: 2rem;
       padding-top: 2rem;
       height: 3.2rem;
     }
-  
-  
-    a{
+
+
+    a {
       @include m.link-button;
       box-sizing: border-box;
     }
-  
+
   }
+}

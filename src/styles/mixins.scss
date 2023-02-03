@@ -41,6 +41,12 @@
     }
 }
 @mixin game-component{
+    padding: 1rem;
     background-color: aliceblue;
     border-radius: 5px;
+}
+
+@mixin game-object{
+    height: 4rem;
+    width: 4rem;
 }

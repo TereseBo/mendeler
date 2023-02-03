@@ -19,7 +19,7 @@ export default function Game() {
     const [parentGene1, setParentGene2] = useState("GGcc")
     const [parentGene2, setParentGene1] = useState("yyww")
     const [childgenes, setChildGenes] = useState(["","","","","","","","","","","","","","","",""])//TODO: Remove preset length of childarr
-    const posParents=['GGSS', 'yyww', 'ooSS','KKee', 'bbcc', 'ppSS']
+    const posParents=['GGRR', 'yyww', 'ooRR','KKee', 'bbcc', 'ppRR']
     function crossPeas(){
         setChildGenes(generateChildGenes(parentGene1, parentGene2))
     }
@@ -43,7 +43,7 @@ export default function Game() {
 
 //Returns the game-area with child and parentpeas. Nr of children are determined by the number of alleles present
     return (
-        <div>
+        <div className="gamecontainer">
         <Genebar className="gameheader" genes={posParents}/>
         <div className="gamebox">
             <Parentmenu callback={peaClick} pospArr={posParents}/>

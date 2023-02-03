@@ -29,4 +29,5 @@ export default function splitalleles(genes){
     });
     console.log(geneset) */
     console.log(geneletters)
+    return geneletters;
 }
