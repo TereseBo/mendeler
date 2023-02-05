@@ -3,6 +3,9 @@
 @mixin base-text {
     font-size: 1rem;
     color: v.$primary-color;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 @mixin header-text {
@@ -18,7 +21,6 @@
 @mixin dark-text-box {
     background-color: v.$accent-color2;
     color: v.$primary-color;
-
 }
 
 @mixin light-text-box {
@@ -48,5 +50,14 @@
 
 @mixin game-object{
     height: 4rem;
-    width: 4rem;
+    width: 4rem; 
+}
+
+@mixin game-text{
+    margin:0.2rem;
+    padding: 0.2rem;
+    text-align: center;
+    color: v.$accent-color2;
+    font-style: italic;
+    font-weight: 500;
 }

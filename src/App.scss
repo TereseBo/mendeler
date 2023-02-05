@@ -1,11 +1,10 @@
 @use './styles/mixins.scss' as m;
 @use './styles/variables.scss' as v;
+
 .App {
   text-align: center;
   display: flex;
   flex-direction: column;
-gap:4rem;
-
  
   header{
     padding-bottom: 2rem;
@@ -13,11 +12,9 @@ gap:4rem;
     height: 3.2rem;
   }
 
-
   a{
     @include m.link-button;
     box-sizing: border-box;
   }
-
 }
 

@@ -1,4 +1,4 @@
-//Returns a numeric value representing position in genestring
+//Returns a numeric value representing the traits position in genestring
 export default function geneType(gene) {
     let alleleType = 0;
     switch (gene) {
@@ -11,7 +11,7 @@ export default function geneType(gene) {
         case 'y':
             alleleType = 1;
             break;
-        //Texture genes
+        //Shape genes
         case 'c':
         case 'e':
         case 'R':

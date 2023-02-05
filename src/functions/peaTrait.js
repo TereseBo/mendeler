@@ -1,5 +1,5 @@
 //Translates geneletters to text to be used for css
-function peaTrait(gene) {
+export default function peaTrait(gene) {
     let trait = "pea";
 
     switch (gene) {
@@ -107,8 +107,10 @@ function peaTrait(gene) {
         case 'ww':
             trait = 'wrinkled';
             break;
+        default:
+            trait = '';
+            break;
     }
     return trait;
 }
 
-export { peaTrait };

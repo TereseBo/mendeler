@@ -1,53 +1,59 @@
 @use '../styles/mixins.scss' as m;
 @use '../styles/variables.scss' as v;
 
-.genebar{
+.genebar {
     @include m.game-component;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
     gap: 0.5rem;
-    .traitbox{
+
+    & p, h3 {
+        @include m.game-text;
+    }
+
+    .traitbox {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        gap:1.5rem;
-       // background-color: aqua;
+        gap: 1.5rem;
 
-    .traitdesc{
-        width: 15%;
-    }
+        .trait {
 
-    .trait{
+            .geneletter {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: v.$primary-color;
+                text-shadow: 1px 1px 1px v.$accent-color2;
 
-        //background-color: aqua;
-        .geneletter{
-            font-size: 1.5rem;
-            font-weight: 700;
+                &#b {
+                    color: v.$bb;
+                }
 
-            &#b{
-                color: v.$bb;
-            }
-            &#G{
-                color: v.$GX;
-            }
-            &#K{
-                color: v.$KX;
-            }
-            &#o{
-                color: v.$oo;
-            }
-            &#p{
-                color: v.$pp;
-            }
-            &#y{
-                color: v.$yy;
-            }
+                &#G {
+                    color: v.$GX;
+                }
 
+                &#K {
+                    color: v.$KX;
+                }
 
+                &#o {
+                    color: v.$oo;
+                }
+
+                &#p {
+                    color: v.$pp;
+                }
+
+                &#y {
+                    color: v.$yy;
+                }
+            }
         }
     }
-}
-
 }

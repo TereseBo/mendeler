@@ -2,50 +2,41 @@
 @use '../styles/mixins.scss' as m;
 
 .gamearea {
-    //background-color: aliceblue;
     display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0;
     max-width: 1000px;
     padding-right: 2rem !important;
     padding-bottom: 2rem !important;
-    //border-radius: 5px;
-@include m.game-component;
-
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows:  repeat(5, 1fr);
-    gap: 0;
+    @include m.game-component;
 
     button {
-        //@include m.game-object;
-     //   margin: 1rem;
-        //margin: 2rem;
         margin-right: 1rem;
         margin-left: 1rem;
         margin-bottom: 1rem;
-      margin-top: 1rem;
+        margin-top: 1rem;
     }
 
     #parent1-container {
-        height: fit-content;
         grid-row: 1 / 2;
         grid-column: 2 / 6;
-     justify-content: center;
-        border-bottom: v.$parent-border;
+        justify-content: center;
+        height: fit-content;
         margin-bottom: 0%;
-       padding-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: v.$parent-border;
     }
 
     #parent2-container {
-        width: 90%;
         grid-row: 2 / 6;
         grid-column: 1 / 2;
         justify-self: stretch;
-        //align-items: flex-start;
-        
-        border-right: v.$parent-border;
+        width: 90%;
         margin-right: 1rem;
-       padding-right: 1.8rem;
-       padding-left: 1rem;
-        //padding-right: 2.7rem;
+        padding-right: 1.8rem;
+        padding-left: 1rem;
+        border-right: v.$parent-border;
     }
 
     #child-container {
@@ -55,22 +46,26 @@
         flex-direction: row;
         flex-wrap: wrap;
 
+        & .child {
+            width: 25%;
+          }
+
         & .peabar:nth-child(odd) {
             .cuboidelliptic {
                 rotate: (180deg);
             }
         }
+
         & .peabar:nth-child(odd) {
             .cuboidwrinkled {
                 rotate: (90deg);
             }
         }
+
         & .peabar:nth-child(odd) {
             .ellipticwrinkled {
                 rotate: (160deg);
             }
         }
     }
-
-
 }

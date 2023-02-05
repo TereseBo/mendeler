@@ -1,85 +1,93 @@
 @use "../styles/variables.scss" as v;
 
 //Basic pea appearance
-.pea{
-    border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
-
+.pea {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
 }
+
 //colors
-.brown{
-  background-color:  v.$bb;
+.brown {
+  background-color: v.$bb;
 }
-.brownorange{
-  background-color:  v.$bo;
-}
-.brownpurple{
-background-color:  v.$bp;
-}
-.brownyellow{
-  background-color:  v.$by;
 
+.brownorange {
+  background-color: v.$bo;
 }
-.Green{
-    background-color: v.$GX;
+
+.brownpurple {
+  background-color: v.$bp;
 }
-.greenkhaki{
-  background-color:  v.$GK;
+
+.brownyellow {
+  background-color: v.$by;
 }
-.Khaki{
-  background-color:  v.$KX;
+
+.Green {
+  background-color: v.$GX;
 }
-.orange{
-  background-color:  v.$oo;
+
+.greenkhaki {
+  background-color: v.$GK;
 }
-.orangeyellow{
-  background-color:  v.$oy;
+
+.Khaki {
+  background-color: v.$KX;
 }
-.orangepurple{
-  background-color:  v.$op;
+
+.orange {
+  background-color: v.$oo;
 }
-.purple{
-  background-color:  v.$pp;
+
+.orangeyellow {
+  background-color: v.$oy;
 }
-.purpleyellow{
+
+.orangepurple {
+  background-color: v.$op;
+}
+
+.purple {
+  background-color: v.$pp;
+}
+
+.purpleyellow {
   background-color: v.$py;
 }
-.yellow{
-    background-color:  v.$yy;
-}
-//shapes
-.Round{
-    
+
+.yellow {
+  background-color: v.$yy;
 }
 
-.cuboid{
+//shapes
+.Round {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+}
+
+.cuboid {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 45% 25% 45% 30%;
   transform: skew(0.02turn, 15deg);
-
 }
 
-.cuboidelliptic{
+.cuboidelliptic {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 45% 25% 45% 30%;
-  transform: rotate(140deg) skew(0.05turn, 15deg) ;
-
+  transform: rotate(140deg) skew(0.05turn, 15deg);
 }
 
-.cuboidwrinkled{
- // width: 3.5rem;
- // height: 3.5rem;
+.cuboidwrinkled {
   position: relative;
-  //border-radius: 50% 25% 35% 50%;
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 45% 15% 45% 15%;
   transform: skew(0.02turn, 15deg);
-  //background-color: aqua;
- // text-align: center;
+
   &:before,
   &:after {
     content: "";
@@ -90,29 +98,31 @@ background-color:  v.$bp;
     width: 100%;
     background: inherit;
   }
+
   &:before {
     border-radius: 35% 35% 35% 25%;
-   // transform: rotate(200deg);
-  // background-color: black;
   }
+
   &:after {
     transform: rotate(60deg);
-   //background-color: blueviolet;
     border-radius: 25% 40% 30% 40%;
   }
 
 }
-.elliptic{
+
+.elliptic {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 70% 25% 70% 25%;
   transform: rotate(45deg);
 }
-.ellipticwrinkled{
+
+.ellipticwrinkled {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 70% 25% 70% 25%;
   transform: rotate(45deg);
+
   &:before,
   &:after {
     content: "";
@@ -123,26 +133,24 @@ background-color:  v.$bp;
     width: 100%;
     background: inherit;
   }
+
   &:before {
-   border-radius: 100% 35% 100% 25%;
+    border-radius: 100% 35% 100% 25%;
     transform: rotate(20deg);
-    //background-color: bisque;
   }
+
   &:after {
     transform: rotate(35deg);
-    //background-color: blueviolet;
     border-radius: 85% 45% 90% 90%;
-   // background-color: palevioletred;
   }
-
-
 }
-.wrinkled{
+
+.wrinkled {
   width: 3.5rem;
   height: 3.5rem;
   position: relative;
   border-radius: 50% 25% 35% 50%;
- // text-align: center;
+
   &:before,
   &:after {
     content: "";
@@ -153,14 +161,14 @@ background-color:  v.$bp;
     width: 100%;
     background: inherit;
   }
+
   &:before {
     border-radius: 25% 25% 30% 25%;
     transform: rotate(25deg);
   }
+
   &:after {
     transform: rotate(60deg);
-    //background-color: blueviolet;
     border-radius: 25% 50% 30% 30%;
   }
-
 }
