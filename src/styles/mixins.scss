@@ -40,6 +40,8 @@
 
     &:hover {
         color: v.$accent-color3;
+        box-shadow: 0 0  0.3rem 0.2rem v.$accent-color3 ;
+
     }
 }
 @mixin game-component{
@@ -60,4 +62,16 @@
     color: v.$accent-color2;
     font-style: italic;
     font-weight: 500;
+}
+
+@mixin pea-hover{
+    &:hover{
+        box-shadow: 0 0  0.3rem 0.2rem v.$accent-color3 ;
+      }
+}
+
+@mixin pea-hover-remove{
+    &:hover{
+        box-shadow: none;
+    }
 }

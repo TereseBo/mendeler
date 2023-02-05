@@ -1,10 +1,13 @@
 @use "../styles/variables.scss" as v;
+@use "../styles/mixins.scss" as m;
 
 //Basic pea appearance
 .pea {
   border-radius: 50%;
   width: 4rem;
   height: 4rem;
+  @include m.pea-hover;
+
 }
 
 //colors

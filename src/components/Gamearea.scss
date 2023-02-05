@@ -26,6 +26,9 @@
         margin-bottom: 0%;
         padding-bottom: 1rem;
         border-bottom: v.$parent-border;
+        & .pea{
+        @include m.pea-hover-remove;
+        }
     }
 
     #parent2-container {
@@ -37,6 +40,9 @@
         padding-right: 1.8rem;
         padding-left: 1rem;
         border-right: v.$parent-border;
+        & .pea{
+            @include m.pea-hover-remove;
+            }
     }
 
     #child-container {
