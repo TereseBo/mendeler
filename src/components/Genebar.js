@@ -4,11 +4,20 @@ import splitalleles from "../functions/splitalleles"
 import peaTrait from "../functions/peaTrait"
 import genetype from "../functions/genetype"
 
-export default function Genebar({ genes }) {
+export default function Genebar({ genes, tracker }) {
     genes = splitalleles(genes)
 
     let colorgenes = genes.filter(gene => genetype(gene) === 1)
     let shapegenes = genes.filter(gene => genetype(gene) === 2)
+
+    function hightlight(e){
+        console.log(e.target.id)
+        tracker(e.target.id)
+    }
+    function removeHighlight(e){
+        console.log(e.target.id)
+        tracker('unset')
+    }
 
     return (
         <div className="genebar">
@@ -22,7 +31,8 @@ export default function Genebar({ genes }) {
                     <h3>Color genes:</h3>
                 </div>
                 {colorgenes.map((item) => (
-                    <p className="trait"><span className="geneletter" id={peaTrait(item).charAt(0)}>{peaTrait(item).charAt(0)}</span>{peaTrait(item).substring(1)}</p>
+                    
+                    <p className="trait" id={peaTrait(item)} onMouseEnter={hightlight} onMouseLeave={removeHighlight}><span className="geneletter" id={peaTrait(item).charAt(0)}>{peaTrait(item).charAt(0)}</span>{peaTrait(item).substring(1)}</p>
                 ))}
             </div>
 
@@ -31,7 +41,7 @@ export default function Genebar({ genes }) {
                     <h3>Shape genes:</h3>
                 </div>
                 {shapegenes.map((item) => (
-                    <p className="trait"> <span className="geneletter" id={peaTrait(item).charAt(0)}>{peaTrait(item).charAt(0)}</span>{peaTrait(item).substring(1)}</p>
+                    <p className="trait" id={peaTrait(item)} onMouseEnter={hightlight} onMouseLeave={removeHighlight}> <span className="geneletter" id={peaTrait(item).charAt(0)}>{peaTrait(item).charAt(0)}</span>{peaTrait(item).substring(1)}</p>
                 ))}
             </div>
         </div >

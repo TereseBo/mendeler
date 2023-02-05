@@ -12,6 +12,7 @@ export default function Game() {
     const [parentGene2, setParentGene1] = useState("yyww")
     const [childgenes, setChildGenes] = useState(["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""])//TODO: Remove preset length of childarr
     const posParents = ['GGRR', 'yyww', 'ooRR', 'KKee', 'bbcc', 'ppRR']
+    const [highLightTracker, setHighLightTracker]=useState('')
 
     function crossPeas() {
         setChildGenes(generateChildGenes(parentGene1, parentGene2))
@@ -29,10 +30,10 @@ export default function Game() {
     //Returns the game-area with child and parentpeas. Nr of children are determined by the number of alleles present
     return (
         <div className="gamecontainer">
-            <Genebar className="gameheader" genes={posParents} />
+            <Genebar className="gameheader" genes={posParents} tracker={setHighLightTracker}/>
             <div className="gamebox">
-                <Parentmenu callback={peaClick} pospArr={posParents} />
-                <Gamearea parentGene1={parentGene1} parentGene2={parentGene2} childgenes={childgenes} childfunk={peaClick} buttonfunk={crossPeas} />
+                <Parentmenu callback={peaClick} pospArr={posParents} lighter={highLightTracker}/>
+                <Gamearea parentGene1={parentGene1} parentGene2={parentGene2} childgenes={childgenes} childfunk={peaClick} buttonfunk={crossPeas} lighter={highLightTracker}/>
             </div>
         </div>
     )
