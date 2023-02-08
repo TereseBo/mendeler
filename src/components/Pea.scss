@@ -6,13 +6,14 @@
   border-radius: 50%;
   width: 4rem;
   height: 4rem;
-  @include m.pea-hover;
+  
 
 }
 
 //colors
 .brown {
   background-color: v.$bb;
+  
 }
 
 .brownorange {
@@ -68,6 +69,7 @@
   border-radius: 50%;
   width: 4rem;
   height: 4rem;
+  @include m.pea-hover;
 }
 
 .cuboid {
@@ -75,6 +77,7 @@
   height: 3.5rem;
   border-radius: 45% 25% 45% 30%;
   transform: skew(0.02turn, 15deg);
+  @include m.pea-hover;
 }
 
 .cuboidelliptic {
@@ -82,6 +85,7 @@
   height: 3.5rem;
   border-radius: 45% 25% 45% 30%;
   transform: rotate(140deg) skew(0.05turn, 15deg);
+  @include m.pea-hover;
 }
 
 .cuboidwrinkled {
@@ -90,6 +94,7 @@
   height: 3.5rem;
   border-radius: 45% 15% 45% 15%;
   transform: skew(0.02turn, 15deg);
+  @include m.pea-hover;
 
   &:before,
   &:after {
@@ -118,6 +123,7 @@
   height: 3.5rem;
   border-radius: 70% 25% 70% 25%;
   transform: rotate(45deg);
+  @include m.pea-hover;
 }
 
 .ellipticwrinkled {
@@ -153,7 +159,7 @@
   height: 3.5rem;
   position: relative;
   border-radius: 50% 25% 35% 50%;
-
+  @include m.pea-hover;
   &:before,
   &:after {
     content: "";

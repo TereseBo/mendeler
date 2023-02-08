@@ -11,11 +11,9 @@ export default function Genebar({ genes, tracker }) {
     let shapegenes = genes.filter(gene => genetype(gene) === 2)
 
     function hightlight(e){
-        console.log(e.target.id)
         tracker(e.target.id)
     }
     function removeHighlight(e){
-        console.log(e.target.id)
         tracker('unset')
     }
 
@@ -32,7 +30,7 @@ export default function Genebar({ genes, tracker }) {
                 </div>
                 {colorgenes.map((item) => (
                     
-                    <p className="trait" id={peaTrait(item)} onMouseEnter={hightlight} onMouseLeave={removeHighlight}><span className="geneletter" id={peaTrait(item).charAt(0)}>{peaTrait(item).charAt(0)}</span>{peaTrait(item).substring(1)}</p>
+                    <p className="trait" id={peaTrait(item)} key={peaTrait(item)} onMouseEnter={hightlight} onMouseLeave={removeHighlight}><span className="geneletter" id={peaTrait(item).charAt(0)}>{peaTrait(item).charAt(0)}</span>{peaTrait(item).substring(1)}</p>
                 ))}
             </div>
 
@@ -41,7 +39,7 @@ export default function Genebar({ genes, tracker }) {
                     <h3>Shape genes:</h3>
                 </div>
                 {shapegenes.map((item) => (
-                    <p className="trait" id={peaTrait(item)} onMouseEnter={hightlight} onMouseLeave={removeHighlight}> <span className="geneletter" id={peaTrait(item).charAt(0)}>{peaTrait(item).charAt(0)}</span>{peaTrait(item).substring(1)}</p>
+                    <p className="trait" id={peaTrait(item)} key={peaTrait(item)} onMouseEnter={hightlight} onMouseLeave={removeHighlight}> <span className="geneletter" id={peaTrait(item).charAt(0)}>{peaTrait(item).charAt(0)}</span>{peaTrait(item).substring(1)}</p>
                 ))}
             </div>
         </div >

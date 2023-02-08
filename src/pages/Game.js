@@ -12,7 +12,7 @@ export default function Game() {
     const [parentGene2, setParentGene1] = useState("yyww")
     const [childgenes, setChildGenes] = useState(["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""])//TODO: Remove preset length of childarr
     const posParents = ['GGRR', 'yyww', 'ooRR', 'KKee', 'bbcc', 'ppRR']
-    const [highLightTracker, setHighLightTracker]=useState('')
+    const [highLightTracker, setHighLightTracker]=useState('unset')
 
     function crossPeas() {
         setChildGenes(generateChildGenes(parentGene1, parentGene2))
