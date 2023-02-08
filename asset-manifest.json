@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mendeler/static/css/main.e0db67bf.css",
-    "main.js": "/mendeler/static/js/main.7a76c806.js",
+    "main.css": "/mendeler/static/css/main.85929832.css",
+    "main.js": "/mendeler/static/js/main.3372910c.js",
     "static/js/787.4926026e.chunk.js": "/mendeler/static/js/787.4926026e.chunk.js",
     "index.html": "/mendeler/index.html",
-    "main.e0db67bf.css.map": "/mendeler/static/css/main.e0db67bf.css.map",
-    "main.7a76c806.js.map": "/mendeler/static/js/main.7a76c806.js.map",
+    "main.85929832.css.map": "/mendeler/static/css/main.85929832.css.map",
+    "main.3372910c.js.map": "/mendeler/static/js/main.3372910c.js.map",
     "787.4926026e.chunk.js.map": "/mendeler/static/js/787.4926026e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0db67bf.css",
-    "static/js/main.7a76c806.js"
+    "static/css/main.85929832.css",
+    "static/js/main.3372910c.js"
   ]
 }
