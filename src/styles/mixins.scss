@@ -24,8 +24,8 @@
 }
 
 @mixin light-text-box {
-    background-color: v.$primary-color;
-    color: v.$accent-color2;
+   
+   @include game-text;
 }
 
 @mixin link-button {
