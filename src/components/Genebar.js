@@ -20,7 +20,7 @@ export default function Genebar({ genes, tracker }) {
     return (
         <div className="genebar">
             <div>
-                <p>Upper case letters represent dominant traits, and lowercase recessive traits </p>
+                <p>Upper case letters represent dominant traits, and lower case recessive traits </p>
                 <p>Create new varieties by clicking the peas you want to use as parents, click the cross-button to breed. Can you get new combinations of recessive traits? </p>
             </div>
 
