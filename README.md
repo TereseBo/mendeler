@@ -10,14 +10,12 @@ In order to display the inheritance patterns, the present alleles are visible bo
 ## Getting started
 Navigate to the link above and try it out. 
 For continued development, first clone the repository from gitHub: 
-
 ```git clone https://github.com/TereseBo/mendeler.git```
 
 Then navigate to the project folder:  
 ```cd baddle```  
 
 To install requirements run:  
-
 ```npm i ```  
 
 ## Environment
@@ -25,7 +23,6 @@ The application does not require any additional sign-ups or registrations but re
 
 ## Testing
 Testing has not been implemented beyond having a run command:
-
 ```npm run test```
 
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information on implementing testing.
